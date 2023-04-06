@@ -1,0 +1,20 @@
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	
++++ b/src/main/resources/application.properties	(date 1680788442390)
+@@ -10,6 +10,6 @@
+ spring.datasource.loggingdb.username=postgres
+ spring.datasource.loggingdb.password=msp
+ 
+-spring.second-datasource.url=jdbc:postgresql://localhost:5433/mydb
+-spring.second-datasource.username=postgres
+-spring.second-datasource.password=msp
+\ No newline at end of file
++spring.datasource.mydb.url=jdbc:postgresql://localhost:5433/mydb
++spring.datasource.mydb.username=postgres
++spring.datasource.mydb.password=msp
+\ No newline at end of file
