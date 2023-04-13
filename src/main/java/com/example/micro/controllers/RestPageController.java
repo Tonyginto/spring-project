@@ -13,7 +13,7 @@ import com.example.micro.rep.UserRepository;
 import java.util.List;
 
 @RestController
-public class PageController {
+public class RestPageController {
 
     @Autowired
     UserRepository userRepository;
