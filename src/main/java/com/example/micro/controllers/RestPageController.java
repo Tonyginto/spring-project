@@ -22,21 +22,31 @@ public class RestPageController {
     @Autowired
     RoleRepository roleRepository;
 
+//    @PostMapping("/t")
+    @GetMapping("/t")
+    public User getByName(/*@RequestParam String name*/){
+        String name = "admin1";
+        return userRepository.findByUsername(name);
+    }
+
+    @GetMapping("/p")
+    public Role getId() {
+        Long in = 1L;
+        return roleRepository.getNameByRoleId(in);
+    }
+
     @GetMapping("/post")
     public List<Post> getAllDB(){
         return postRepository.findAll();
-//        return userRepository.findAll();
     }
 
     @GetMapping("/kek")
     public List<User> getAllDB2(){
-//        return postRepository.findAll();
         return userRepository.findAll();
     }
 
     @GetMapping("/lol")
     public List<Role> getAllDB3(){
-//        return postRepository.findAll();
         return roleRepository.findAll();
     }
 }
