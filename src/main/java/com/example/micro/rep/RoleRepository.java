@@ -4,5 +4,5 @@ import com.example.micro.models.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
-    Role getNameByRoleId(Long roleId);
+    Role getByRoleId(Long roleId);
 }

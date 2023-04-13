@@ -30,9 +30,9 @@ public class RestPageController {
     }
 
     @GetMapping("/p")
-    public Role getId() {
+    public String getId() {
         Long in = 1L;
-        return roleRepository.getNameByRoleId(in);
+        return roleRepository.getByRoleId(in).getRoleName();
     }
 
     @GetMapping("/post")
