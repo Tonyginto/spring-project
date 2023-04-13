@@ -10,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +22,7 @@ public class WebSecurityConfig {
         http
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/","/home").permitAll()
+                                .requestMatchers("/hello", "/lol", "/kek").hasRole("ADMIN")
                         .anyRequest().authenticated()
                         /*.requestMatchers("/hello").hasRole("ADMIN")*/)
                 .formLogin((form) -> form
