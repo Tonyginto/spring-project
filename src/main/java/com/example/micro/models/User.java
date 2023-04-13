@@ -8,16 +8,16 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_id;
+    private Long userId;
 
     private String username;
 
     private String password;
 
-    private Long role_id;
+    private Long roleId;
 
-    public Long getUser_id() {
-        return user_id;
+    public Long getUserId() {
+        return userId;
     }
 
     public String getUsername() {
@@ -28,7 +28,7 @@ public class User {
         return password;
     }
 
-    public Long getRole_id() {
-        return role_id;
+    public Long getRoleId() {
+        return roleId;
     }
 }

@@ -7,15 +7,15 @@ import jakarta.persistence.*;
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long role_id;
+    private Long roleId;
 
-    private String role_name;
+    private String roleName;
 
-    public Long getRole_id() {
-        return role_id;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public String getRole_name() {
-        return role_name;
+    public String getRoleName() {
+        return roleName;
     }
 }
