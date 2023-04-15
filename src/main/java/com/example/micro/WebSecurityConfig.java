@@ -38,6 +38,11 @@ public class WebSecurityConfig {
         return http.build();
     }
 
+//    Начиная с версии 5.7.0-M2 WebSecurityConfigurerAdapter был удалён (мной использовалась версия 6.0.2)
+//    код ниже больше не доступен
+//    ссылка на изменения
+//    https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter/
+
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 //        auth.userDetailsService(userDetailsService)
