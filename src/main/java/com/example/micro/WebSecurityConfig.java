@@ -18,12 +18,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-@EnableWebSecurity
-public class WebSecurityConfig {
+//@EnableWebSecurity
+public class WebSecurityConfig /*extends WebSecurityConfigurerAdapter */{
 
     @Autowired
     private UserDetailsService userDetailsService;
 
+//    Начиная с версии 5.7.0-M2 WebSecurityConfigurerAdapter был удалён (мной использовалась версия 6.0.2)
+//    код ниже ещё не доступен
+//    ссылка на изменения
+//    https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter/
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
@@ -38,10 +42,15 @@ public class WebSecurityConfig {
         return http.build();
     }
 
-//    Начиная с версии 5.7.0-M2 WebSecurityConfigurerAdapter был удалён (мной использовалась версия 6.0.2)
-//    код ниже больше не доступен
-//    ссылка на изменения
-//    https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter/
+//    @Bean
+//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//        return http
+//                .authorizeRequests()
+//                .antMatchers("/hello", "/lol", "/kek").hasRole("ADMIN")
+//                .antMatchers("/","/home","/t", "/p").permitAll()
+//                .and()
+//                .build();
+//    }
 
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
