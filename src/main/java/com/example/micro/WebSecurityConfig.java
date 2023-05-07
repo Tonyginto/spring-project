@@ -19,7 +19,7 @@ import java.util.List;
 
 @Configuration
 //@EnableWebSecurity
-public class WebSecurityConfig /*extends WebSecurityConfigurerAdapter */{
+public class WebSecurityConfig {
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -41,22 +41,6 @@ public class WebSecurityConfig /*extends WebSecurityConfigurerAdapter */{
                 .logout((logout) -> logout.permitAll());
         return http.build();
     }
-
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        return http
-//                .authorizeRequests()
-//                .antMatchers("/hello", "/lol", "/kek").hasRole("ADMIN")
-//                .antMatchers("/","/home","/t", "/p").permitAll()
-//                .and()
-//                .build();
-//    }
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService)
-//                .passwordEncoder(passwordEncoder());
-//    }
 
     @Bean
     public UserDetailsService userDetailsService() {
