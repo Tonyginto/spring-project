@@ -1,6 +1,6 @@
 package com.example.micro.rep;
 
-import com.example.micro.models.User;
+import com.example.micro.dto.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

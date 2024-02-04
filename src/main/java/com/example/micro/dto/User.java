@@ -1,4 +1,4 @@
-package com.example.micro.models;
+package com.example.micro.dto;
 
 import jakarta.persistence.*;
 

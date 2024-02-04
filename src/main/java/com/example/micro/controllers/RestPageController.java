@@ -1,9 +1,9 @@
 package com.example.micro.controllers;
 
-import com.example.micro.models.Post;
-import com.example.micro.models.Role;
+import com.example.micro.dto.Post;
+import com.example.micro.dto.Role;
 import com.example.micro.rep.PostRepository;
-import com.example.micro.models.User;
+import com.example.micro.dto.User;
 import com.example.micro.rep.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,14 +15,18 @@ import java.util.List;
 @RestController
 public class RestPageController {
 
-    @Autowired
     UserRepository userRepository;
-    @Autowired
     PostRepository postRepository;
-    @Autowired
     RoleRepository roleRepository;
 
-//    @PostMapping("/t")
+    @Autowired
+    public RestPageController(UserRepository userRepository ,PostRepository postRepository ,RoleRepository roleRepository) {
+        this.userRepository = userRepository;
+        this.postRepository = postRepository;
+        this.roleRepository = roleRepository;
+    }
+
+    //    @PostMapping("/t")
     @GetMapping("/t")
     public User getByName(/*@RequestParam String name*/){
         String name = "admin1";
@@ -36,17 +40,17 @@ public class RestPageController {
     }
 
     @GetMapping("/post")
-    public List<Post> getAllDB(){
+    public List<Post> getAllPost(){
         return postRepository.findAll();
     }
 
     @GetMapping("/kek")
-    public List<User> getAllDB2(){
+    public List<User> getAllUser(){
         return userRepository.findAll();
     }
 
     @GetMapping("/lol")
-    public List<Role> getAllDB3(){
+    public List<Role> getAllRole(){
         return roleRepository.findAll();
     }
 }
