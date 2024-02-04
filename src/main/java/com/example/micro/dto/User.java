@@ -6,35 +6,35 @@ import jakarta.persistence.*;
 @Table(name = "users")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long userId;
 
-    private String username;
+  private String username;
 
-    private String password;
+  private String password;
 
-    private Long roleId;
+  private Long roleId;
 
-    public User(String username, String password, Long roleId) {
-        this.username = username;
-        this.password = password;
-        this.roleId = roleId;
-    }
+  public User(String username ,String password ,Long roleId) {
+    this.username = username;
+    this.password = password;
+    this.roleId = roleId;
+  }
 
-    public Long getUserId() {
-        return userId;
-    }
+  public Long getUserId() {
+    return userId;
+  }
 
-    public String getUsername() {
-        return username;
-    }
+  public String getUsername() {
+    return username;
+  }
 
-    public String getPassword() {
-        return password;
-    }
+  public String getPassword() {
+    return password;
+  }
 
-    public Long getRoleId() {
-        return roleId;
-    }
+  public Long getRoleId() {
+    return roleId;
+  }
 }
