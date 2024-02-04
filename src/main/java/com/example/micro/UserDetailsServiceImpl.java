@@ -1,8 +1,8 @@
 package com.example.micro;
 
 import com.example.micro.dto.User;
-import com.example.micro.rep.RoleRepository;
-import com.example.micro.rep.UserRepository;
+import com.example.micro.repository.RoleRepository;
+import com.example.micro.repository.UserRepository;
 import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

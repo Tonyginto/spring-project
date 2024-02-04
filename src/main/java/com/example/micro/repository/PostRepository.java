@@ -1,4 +1,4 @@
-package com.example.micro.rep;
+package com.example.micro.repository;
 
 import com.example.micro.dto.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
